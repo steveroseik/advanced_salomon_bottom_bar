@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:advanced_salomon_bottom_bar/salomon_bottom_bar.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  static final title = 'salomon_bottom_bar';
+  static final title = 'floating_salomon_bottom_bar';
 
   @override
   _MyAppState createState() => _MyAppState();
