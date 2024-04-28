@@ -66,7 +66,7 @@ class AdvancedSalomonBottomBar extends StatelessWidget {
 
     return Container(
       decoration: decoration,
-      color: backgroundColor ?? Colors.transparent,
+      color: decoration == null ? backgroundColor ?? Colors.transparent : null,
       child: SafeArea(
         minimum: margin,
         child: Row(
