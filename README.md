@@ -1,4 +1,4 @@
-# salomon_bottom_bar
+# advanced_salomon_bottom_bar
 
 Yet another bottom navigation bar, but with a few key promises.
 

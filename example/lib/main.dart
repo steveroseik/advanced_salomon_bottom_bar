@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:advanced_salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:advanced_salomon_bottom_bar/advanced_salomon_bottom_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,33 +27,33 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text(MyApp.title),
         ),
-        bottomNavigationBar: SalomonBottomBar(
+        bottomNavigationBar: AdvancedSalomonBottomBar(
           currentIndex: _currentIndex,
           onTap: (i) => setState(() => _currentIndex = i),
           items: [
             /// Home
-            SalomonBottomBarItem(
+            AdvancedSalomonBottomBarItem(
               icon: Icon(Icons.home),
               title: Text("Home"),
               selectedColor: Colors.purple,
             ),
 
             /// Likes
-            SalomonBottomBarItem(
+            AdvancedSalomonBottomBarItem(
               icon: Icon(Icons.favorite_border),
               title: Text("Likes"),
               selectedColor: Colors.pink,
             ),
 
             /// Search
-            SalomonBottomBarItem(
+            AdvancedSalomonBottomBarItem(
               icon: Icon(Icons.search),
               title: Text("Search"),
               selectedColor: Colors.orange,
             ),
 
             /// Profile
-            SalomonBottomBarItem(
+            AdvancedSalomonBottomBarItem(
               icon: Icon(Icons.person),
               title: Text("Profile"),
               selectedColor: Colors.teal,

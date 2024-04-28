@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-class SalomonBottomBar extends StatelessWidget {
-  /// A bottom bar that faithfully follows the design by Aurélien Salomon
+class AdvancedSalomonBottomBar extends StatelessWidget {
+  /// A bottom bar that faithfully follows the design by Aurélien Salomon with little bit more things
   ///
   /// https://dribbble.com/shots/5925052-Google-Bottom-Bar-Navigation-Pattern/
-  SalomonBottomBar({
+  AdvancedSalomonBottomBar({
     Key? key,
     required this.items,
     this.backgroundColor,
     this.currentIndex = 0,
     this.onTap,
+    this.decoration,
     this.selectedItemColor,
     this.unselectedItemColor,
     this.selectedColorOpacity,
@@ -21,7 +22,7 @@ class SalomonBottomBar extends StatelessWidget {
   }) : super(key: key);
 
   /// A list of tabs to display, ie `Home`, `Likes`, etc
-  final List<SalomonBottomBarItem> items;
+  final List<AdvancedSalomonBottomBarItem> items;
 
   /// The tab to display.
   final int currentIndex;
@@ -56,11 +57,15 @@ class SalomonBottomBar extends StatelessWidget {
   /// The transition curve
   final Curve curve;
 
+  /// The boxDecoration
+  final BoxDecoration? decoration;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return ColoredBox(
+    return Container(
+      decoration: decoration,
       color: backgroundColor ?? Colors.transparent,
       child: SafeArea(
         minimum: margin,
@@ -166,7 +171,7 @@ class SalomonBottomBar extends StatelessWidget {
 }
 
 /// A tab to display in a [SalomonBottomBar]
-class SalomonBottomBarItem {
+class AdvancedSalomonBottomBarItem {
   /// An icon to display.
   final Widget icon;
 
@@ -182,7 +187,7 @@ class SalomonBottomBarItem {
   /// The color to display when this tab is not selected.
   final Color? unselectedColor;
 
-  SalomonBottomBarItem({
+  AdvancedSalomonBottomBarItem({
     required this.icon,
     required this.title,
     this.selectedColor,
