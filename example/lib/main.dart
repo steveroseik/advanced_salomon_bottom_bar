@@ -27,37 +27,48 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text(MyApp.title),
         ),
-        bottomNavigationBar: AdvancedSalomonBottomBar(
-          currentIndex: _currentIndex,
-          onTap: (i) => setState(() => _currentIndex = i),
-          items: [
-            /// Home
-            AdvancedSalomonBottomBarItem(
-              icon: Icon(Icons.home),
-              title: Text("Home"),
-              selectedColor: Colors.purple,
-            ),
+        body: Stack(
+          children: [
+            Align(
+              alignment: Alignment.center,
+              child: AdvancedSalomonBottomBar(
+                currentIndex: _currentIndex,
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(50)
+                ),
+                onTap: (i) => setState(() => _currentIndex = i),
+                items: [
+                  /// Home
+                  AdvancedSalomonBottomBarItem(
+                    icon: Icon(Icons.home),
+                    title: Text("Home"),
+                    selectedColor: Colors.purple,
+                  ),
 
-            /// Likes
-            AdvancedSalomonBottomBarItem(
-              icon: Icon(Icons.favorite_border),
-              title: Text("Likes"),
-              selectedColor: Colors.pink,
-            ),
+                  /// Likes
+                  AdvancedSalomonBottomBarItem(
+                    icon: Icon(Icons.favorite_border),
+                    title: Text("Likes"),
+                    selectedColor: Colors.pink,
+                  ),
 
-            /// Search
-            AdvancedSalomonBottomBarItem(
-              icon: Icon(Icons.search),
-              title: Text("Search"),
-              selectedColor: Colors.orange,
-            ),
+                  /// Search
+                  AdvancedSalomonBottomBarItem(
+                    icon: Icon(Icons.search),
+                    title: Text("Search"),
+                    selectedColor: Colors.orange,
+                  ),
 
-            /// Profile
-            AdvancedSalomonBottomBarItem(
-              icon: Icon(Icons.person),
-              title: Text("Profile"),
-              selectedColor: Colors.teal,
-            ),
+                  /// Profile
+                  AdvancedSalomonBottomBarItem(
+                    icon: Icon(Icons.person),
+                    title: Text("Profile"),
+                    selectedColor: Colors.teal,
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
